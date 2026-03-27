@@ -1,5 +1,7 @@
-/[LI]ibrary/
+/[Ll]ibrary/
 /[Tt]emp/
-/[Oo]bij/
+/[Oo]bj/
 /[Bb]uild/
 /[Ll]ogs/
+
+.idea/*
