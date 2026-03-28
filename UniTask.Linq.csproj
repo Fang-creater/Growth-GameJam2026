@@ -41,13 +41,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\MessagePack.Annotations.3.1.4\lib\netstandard2.0\MessagePack.Annotations.dll" />
-    <Analyzer Include="E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\Newtonsoft.Json.13.0.4\lib\netstandard2.0\Newtonsoft.Json.dll" />
-    <Analyzer Include="E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll" />
     <Analyzer Include="E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\MessagePackAnalyzer.3.1.4\analyzers\roslyn4.3\cs\MessagePack.SourceGenerator.dll" />
-    <Analyzer Include="E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\Microsoft.NET.StringTools.17.11.4\lib\netstandard2.0\Microsoft.NET.StringTools.dll" />
-    <Analyzer Include="E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\MessagePack.3.1.4\lib\netstandard2.1\MessagePack.dll" />
-    <Analyzer Include="E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\System.Collections.Immutable.8.0.0\lib\netstandard2.0\System.Collections.Immutable.dll" />
     <Analyzer Include="E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\MessagePackAnalyzer.3.1.4\analyzers\roslyn4.3\cs\MessagePack.Analyzers.CodeFixes.dll" />
     <Analyzer Include="E:\Programs\Unity\Editor\2022.3.62f2\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="E:\Programs\Unity\Editor\2022.3.62f2\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
@@ -62,8 +56,8 @@
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\ToDictionary.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\Skip.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\SkipUntilCanceled.cs" />
-    <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\Distinct.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\Average.cs" />
+    <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\Distinct.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\GroupBy.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\Buffer.cs" />
     <Compile Include="Assets\Plugins\UniTask\Runtime\Linq\ToObservable.cs" />
@@ -400,8 +394,17 @@
     <Reference Include="Unity.Collections.LowLevel.ILSupport">
       <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Library\PackageCache\com.unity.collections@1.2.4\Unity.Collections.LowLevel.ILSupport\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
     </Reference>
+    <Reference Include="MessagePack.Annotations">
+      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\MessagePack.Annotations.3.1.4\lib\netstandard2.0\MessagePack.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.NET.StringTools">
+      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\Microsoft.NET.StringTools.17.11.4\lib\netstandard2.0\Microsoft.NET.StringTools.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Library\PackageCache\com.unity.collab-proxy@2.12.4\Lib\Editor\Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenEditor">
+      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
     </Reference>
     <Reference Include="OnigwrapPlastic">
       <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Library\PackageCache\com.unity.collab-proxy@2.12.4\Lib\Editor\TextMateSharp\Onigwrap\OnigwrapPlastic.dll</HintPath>
@@ -409,47 +412,38 @@
     <Reference Include="Unity.Plastic.Newtonsoft.Json">
       <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Library\PackageCache\com.unity.collab-proxy@2.12.4\Lib\Editor\Unity.Plastic.Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\Newtonsoft.Json.13.0.4\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Library\PackageCache\com.unity.collab-proxy@2.12.4\Lib\Editor\log4netPlastic.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
       <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
     </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\System.Collections.Immutable.8.0.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Library\PackageCache\com.unity.collab-proxy@2.12.4\Lib\Editor\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
-    </Reference>
-    <Reference Include="NuGetForUnity.PluginAPI">
-      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Assets\NuGet\Editor\NuGetForUnity.PluginAPI.dll</HintPath>
-    </Reference>
-    <Reference Include="NugetForUnity">
-      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Assets\NuGet\Editor\NugetForUnity.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTweenEditor">
-      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Assets\Plugins\Demigiant\DOTween\Editor\DOTweenEditor.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
       <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\Newtonsoft.Json.13.0.4\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="MessagePack.Annotations">
-      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\MessagePack.Annotations.3.1.4\lib\netstandard2.0\MessagePack.Annotations.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Library\PackageCache\com.unity.visualscripting@1.9.4\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe">
       <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.NET.StringTools">
-      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\Microsoft.NET.StringTools.17.11.4\lib\netstandard2.0\Microsoft.NET.StringTools.dll</HintPath>
+    <Reference Include="NuGetForUnity.PluginAPI">
+      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Assets\NuGet\Editor\NuGetForUnity.PluginAPI.dll</HintPath>
     </Reference>
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\System.Collections.Immutable.8.0.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Library\PackageCache\com.unity.visualscripting@1.9.4\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
+    </Reference>
+    <Reference Include="NugetForUnity">
+      <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Assets\NuGet\Editor\NugetForUnity.dll</HintPath>
     </Reference>
     <Reference Include="MessagePack">
       <HintPath>E:\GameDev\Projects\UnityProjects\Growth-GameJam2026\Packages\nuget-packages\InstalledPackages\MessagePack.3.1.4\lib\netstandard2.1\MessagePack.dll</HintPath>
