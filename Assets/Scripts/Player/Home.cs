@@ -10,7 +10,7 @@ namespace Regrowth
         {
             if (other.CompareTag("Player"))
             {
-                var hit = Physics2D.Raycast(transform.position, Vector2.down, _maxFloorDistance, LayerMask.GetMask("Tree"));
+                var hit = Physics2D.Raycast(transform.position, Vector2.up, _maxFloorDistance, LayerMask.GetMask("Tree"));
                 if (hit.collider != null) Succeed();
             }
         }

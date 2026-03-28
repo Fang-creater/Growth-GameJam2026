@@ -32,7 +32,7 @@ namespace Regrowth
                 LayerMask.GetMask("Ground"));
             RaycastHit2D hitUp = Physics2D.Raycast(mousePos + Vector2.up * raycastDistance, Vector2.up, thickestGround,
                 LayerMask.GetMask("Ground"));
-            if (!hit.collider || hitUp.collider)
+            if (hit.collider == null || hitUp.collider != null)
             {
                 _indicator.SetIndicator(mousePos, false);
                 return;

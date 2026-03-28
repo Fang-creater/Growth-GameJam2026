@@ -616,7 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4ad876454a42b1a3774d0b21f3adf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 8
+  maxSpeed: 4
   acceleration: 50
   gravityScale: 3
   climbTime: 0.5

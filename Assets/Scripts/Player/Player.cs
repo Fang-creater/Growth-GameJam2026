@@ -63,7 +63,7 @@ namespace Regrowth
         }
         private void Climb(Tree tree)
         {
-            if (tree) return;
+            if (tree == null) return;
             _isClimbing = true;
             _coll.enabled = false;
             var target = new Vector2(transform.position.x, tree.GetTargetPos(transform.position).y);
