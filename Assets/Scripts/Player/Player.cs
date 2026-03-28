@@ -36,9 +36,15 @@ namespace Regrowth
         }
         private void Update()
         {
+            if (_locked) return;
             _horizontalInput = Input.GetAxisRaw("Horizontal");
             if (Input.GetButtonDown("Interact") && !_isClimbing)
                 Climb(_onTree);
+            if (Mathf.Abs(_horizontalInput) > 0.01)
+            {
+                var dir = _horizontalInput > 0 ? 1 : -1;
+                transform.localScale = new Vector3(dir, transform.localScale.y, transform.localScale.z);
+            }
         }
         private void FixedUpdate()
         {
@@ -61,7 +67,7 @@ namespace Regrowth
             _isClimbing = true;
             _coll.enabled = false;
             var target = new Vector2(transform.position.x, tree.GetTargetPos(transform.position).y);
-            var direction = (int)Mathf.Sign(target.x - transform.position.x);
+            var direction = target.x > transform.position.x ? 1 : -1;
             _animator.SetInteger(Climbing, direction);
             _rb.DOMove(target, climbTime)
                 .SetEase(Ease.Linear)
