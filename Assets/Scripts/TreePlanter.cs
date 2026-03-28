@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using SnExtension;
+using UnityEngine;
 
 namespace Regrowth
 {
-    public class TreePlanter : MonoBehaviour
+    public class TreePlanter : BehaviourSingleton<TreePlanter>
     {
         public bool PlantMode = false;
 
@@ -10,6 +11,7 @@ namespace Regrowth
         [SerializeField] private TreeIndicator _indicator;
         [SerializeField] private float raycastDistance = 10f;
         [SerializeField] private float thickestGround = 20f;
+        [field: SerializeField] public int SeedCount { get; private set; }
 
         private Camera _mainCamera;
         private void Start()
@@ -19,7 +21,7 @@ namespace Regrowth
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q) && SeedCount > 0)
                 PlantMode = true;
             if (!PlantMode)
             {
@@ -43,6 +45,7 @@ namespace Regrowth
                 PlantMode = false;
                 var tree = Instantiate(_treePref, transform);
                 tree.transform.position = hit.point;
+                SeedCount--;
             }
         }
     }
