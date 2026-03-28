@@ -13,3 +13,4 @@ PresetManager:
     - m_Preset: {fileID: 2655988077585873504, guid: 3e79e9c499442ce4d92194a05469e6db, type: 2}
       m_Filter: 
       m_Disabled: 0
+  m_DefaultPresets: {}
