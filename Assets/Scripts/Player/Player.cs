@@ -17,7 +17,8 @@ namespace Regrowth
         [SerializeField] private float acceleration = 50f;
         [SerializeField] private float gravityScale = 3.2f;
         [Header("Others")] 
-        [SerializeField] private float climbTime = 0.5f;
+        [SerializeField] private float climbTime = 1f;
+        [SerializeField] private Transform groundCheck;
 
         private Rigidbody2D _rb;
         private Collider2D _coll;
@@ -38,20 +39,20 @@ namespace Regrowth
         {
             if (_locked) return;
             _horizontalInput = Input.GetAxisRaw("Horizontal");
-            if (Input.GetButtonDown("Interact") && !_isClimbing)
+            if (Input.GetButtonDown("Interact") && !_isClimbing && CheckOnGround())
                 Climb(_onTree);
             if (Mathf.Abs(_horizontalInput) > 0.01)
             {
                 var dir = _horizontalInput > 0 ? 1 : -1;
                 transform.localScale = new Vector3(dir, transform.localScale.y, transform.localScale.z);
             }
+            _animator.SetFloat(HSpeed, _horizontalInput);
+            _animator.SetFloat(VSpeed, _rb.velocity.y);
         }
         private void FixedUpdate()
         {
             if (_locked) return;
             Move();
-            _animator.SetFloat(HSpeed, _rb.velocity.x);
-            _animator.SetFloat(VSpeed, _rb.velocity.y);
         }
 
         private void Move()
@@ -67,7 +68,7 @@ namespace Regrowth
             _isClimbing = true;
             _coll.enabled = false;
             var target = new Vector2(transform.position.x, tree.GetTargetPos(transform.position).y);
-            var direction = target.x > transform.position.x ? 1 : -1;
+            var direction = target.y > transform.position.y ? 1 : -1;
             _animator.SetInteger(Climbing, direction);
             _rb.DOMove(target, climbTime)
                 .SetEase(Ease.Linear)
@@ -77,6 +78,10 @@ namespace Regrowth
                     _animator.SetInteger(Climbing, 0);
                     _coll.enabled = true;
                 });
+        }
+        private bool CheckOnGround()
+        {
+            return Physics2D.OverlapCircle(transform.position, 0.5f, LayerMask.GetMask("Ground"));
         }
 
         private void OnTriggerEnter2D(Collider2D other)

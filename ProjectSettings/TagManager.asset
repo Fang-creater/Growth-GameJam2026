@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tree
-  tags: []
   layers:
   - Default
   - TransparentFX
@@ -39,11 +38,6 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
@@ -51,10 +45,10 @@ TagManager:
   - name: BackGround
     uniqueID: 374387775
     locked: 0
-  - name: Others
+  - name: Tree
     uniqueID: 1544006759
     locked: 0
-  - name: Indicator
+  - name: Home
     uniqueID: 77213631
     locked: 0
   - name: Player
