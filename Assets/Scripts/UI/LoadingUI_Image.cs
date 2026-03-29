@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LoadingUI_Image : MonoBehaviour
 {
     [Header("Scene")]
-    [SerializeField] private string sceneToLoad = "Level01";
+    [SerializeField] private string sceneToLoad = "Level1";
     [SerializeField] private bool useSceneFlow = true;
 
     [Header("Progress Bar")]

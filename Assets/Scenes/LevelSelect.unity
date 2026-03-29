@@ -672,7 +672,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 430834376}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Regrowth.LevelSelectController, regrowth
+        m_MethodName: GoLevel2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &430834376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -736,7 +748,7 @@ GameObject:
   - component: {fileID: 448391163}
   - component: {fileID: 448391164}
   m_Layer: 5
-  m_Name: LevelCard_03
+  m_Name: LevelCard_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -781,7 +793,7 @@ MonoBehaviour:
   glow: {fileID: 124105611}
   playButton: {fileID: 1672667213}
   lockIcon: {fileID: 755236153}
-  sceneName: Level03
+  sceneName: Level3
   unlocked: 1
   hoverScale: 1.12
   hoverSpeed: 10
@@ -1687,7 +1699,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1411548686}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Regrowth.LevelSelectController, regrowth
+        m_MethodName: GoLevel4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1411548686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1751,7 +1775,7 @@ GameObject:
   - component: {fileID: 1542649235}
   - component: {fileID: 1542649236}
   m_Layer: 5
-  m_Name: LevelCard_01
+  m_Name: LevelCard_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1796,7 +1820,7 @@ MonoBehaviour:
   glow: {fileID: 324214977}
   playButton: {fileID: 1720306421}
   lockIcon: {fileID: 389080297}
-  sceneName: Level01
+  sceneName: Level1
   unlocked: 1
   hoverScale: 1.12
   hoverSpeed: 10
@@ -1889,7 +1913,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1672667214}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Regrowth.LevelSelectController, regrowth
+        m_MethodName: GoLevel3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1672667214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2025,7 +2061,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1720306422}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Regrowth.LevelSelectController, regrowth
+        m_MethodName: GoLevel1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1720306422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2088,6 +2136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1729361821}
   - component: {fileID: 1729361820}
+  - component: {fileID: 1729361823}
   m_Layer: 5
   m_Name: LevelSelectUI
   m_TagString: Untagged
@@ -2133,6 +2182,18 @@ RectTransform:
   m_AnchoredPosition: {x: 960.00006, y: 462.9973}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1729361823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729361819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d92f3a8d9c4ad244c9069586e00c02a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1750373638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2219,7 +2280,7 @@ GameObject:
   - component: {fileID: 1842424921}
   - component: {fileID: 1842424922}
   m_Layer: 5
-  m_Name: LevelCard_04
+  m_Name: LevelCard_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2264,7 +2325,7 @@ MonoBehaviour:
   glow: {fileID: 44776728}
   playButton: {fileID: 1411548685}
   lockIcon: {fileID: 1750373640}
-  sceneName: Level04
+  sceneName: Level4
   unlocked: 1
   hoverScale: 1.12
   hoverSpeed: 10
@@ -2533,7 +2594,7 @@ GameObject:
   - component: {fileID: 2120317381}
   - component: {fileID: 2120317382}
   m_Layer: 5
-  m_Name: LevelCard_02
+  m_Name: LevelCard_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2578,7 +2639,7 @@ MonoBehaviour:
   glow: {fileID: 1283301439}
   playButton: {fileID: 430834375}
   lockIcon: {fileID: 1862138976}
-  sceneName: Level02
+  sceneName: Level2
   unlocked: 1
   hoverScale: 1.12
   hoverSpeed: 10

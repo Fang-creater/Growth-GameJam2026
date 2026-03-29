@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e0d4b822b9cdf14eb8e5262a1eafb06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Level01
+  sceneToLoad: Level1
   useSceneFlow: 1
   progressFill: {fileID: 1884554518}
   fillSmoothSpeed: 0.8

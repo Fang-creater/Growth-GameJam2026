@@ -12,7 +12,7 @@ public class LevelSelectCard : MonoBehaviour, IPointerEnterHandler, IPointerExit
     [SerializeField] private Image lockIcon;
 
     [Header("Level")]
-    [SerializeField] private string sceneName = "Level01";
+    [SerializeField] private string sceneName = "Level1";
     [SerializeField] private bool unlocked = true;
 
     [Header("Hover FX")]
