@@ -51,7 +51,7 @@ MonoBehaviour:
   _indicator: {fileID: 3489333331129900836}
   raycastDistance: 1
   thickestGround: 4
-  <SeedCount>k__BackingField: 1
+  SeedCount: 1
 --- !u!1001 &7300094346912820042
 PrefabInstance:
   m_ObjectHideFlags: 0

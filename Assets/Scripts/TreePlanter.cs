@@ -12,7 +12,7 @@ namespace Regrowth
         [SerializeField] private TreeIndicator _indicator;
         [SerializeField] private float raycastDistance = 10f;
         [SerializeField] private float thickestGround = 20f;
-        [field: SerializeField] public int SeedCount { get; private set; }
+        [SerializeField] public int SeedCount;
 
         private Camera _mainCamera;
         private void Start()

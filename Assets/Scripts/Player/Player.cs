@@ -9,7 +9,6 @@ namespace Regrowth
     {
         private static readonly int Climbing = Animator.StringToHash("Climbing");
         private static readonly int HSpeed = Animator.StringToHash("HSpeed");
-        private static readonly int VSpeed = Animator.StringToHash("VSpeed");
         private static readonly int Sleeping = Animator.StringToHash("Success");
         private static readonly int Defeat = Animator.StringToHash("Defeat");
 
@@ -48,7 +47,6 @@ namespace Regrowth
                 transform.localScale = new Vector3(dir, transform.localScale.y, transform.localScale.z);
             }
             _animator.SetFloat(HSpeed, _horizontalInput);
-            _animator.SetFloat(VSpeed, _rb.velocity.y);
         }
         private void FixedUpdate()
         {
@@ -83,7 +81,7 @@ namespace Regrowth
         }
         private bool CheckOnGround()
         {
-            return Physics2D.OverlapCircle(transform.position, 0.5f, LayerMask.GetMask("Ground"));
+            return Physics2D.OverlapCircle(transform.position, 0.5f, LayerMask.GetMask("Ground", "TreeCrown"));
         }
         private bool CheckOnWater()
         {
