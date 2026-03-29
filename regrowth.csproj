@@ -57,8 +57,9 @@
     <Compile Include="Assets\Scripts\BehaviourSingleton.cs" />
     <Compile Include="Assets\Scripts\DontDestroyOnLoadSingleton.cs" />
     <Compile Include="Assets\Scripts\Player\Tree.cs" />
-    <Compile Include="Assets\Scripts\Player\Home.cs" />
     <Compile Include="Assets\Scripts\UI\CutoffMaskUI.cs" />
+    <Compile Include="Assets\Scripts\Player\Home.cs" />
+    <Compile Include="Assets\Scripts\Player\Mush.cs" />
     <Compile Include="Assets\Scripts\LoadingManager.cs" />
     <None Include="Assets\Scripts\regrowth.asmdef" />
     <Reference Include="UnityEngine">

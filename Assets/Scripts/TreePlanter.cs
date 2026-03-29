@@ -1,4 +1,5 @@
-﻿using SnExtension;
+﻿using DG.Tweening;
+using SnExtension;
 using UnityEngine;
 
 namespace Regrowth
@@ -7,7 +8,7 @@ namespace Regrowth
     {
         public bool PlantMode = false;
 
-        [SerializeField] private Tree _treePref;
+        [SerializeField] private Tree _treePref, _bigTreePref;
         [SerializeField] private TreeIndicator _indicator;
         [SerializeField] private float raycastDistance = 10f;
         [SerializeField] private float thickestGround = 20f;
@@ -34,16 +35,32 @@ namespace Regrowth
                 LayerMask.GetMask("Ground"));
             RaycastHit2D hitUp = Physics2D.Raycast(mousePos + Vector2.up * raycastDistance, Vector2.up, thickestGround,
                 LayerMask.GetMask("Ground"));
+            RaycastHit2D hitPool = Physics2D.Raycast(mousePos + Vector2.up * raycastDistance, Vector2.down, raycastDistance * 2,
+                LayerMask.GetMask("Water"));
+            var onPool = hitPool.collider != null;
             if (hit.collider == null || hitUp.collider != null)
             {
-                _indicator.SetIndicator(mousePos, false);
+                _indicator.SetIndicator(mousePos, 0, false);
                 return;
             }
-            _indicator.SetIndicator(hit.point);
+            _indicator.SetIndicator(hit.point, onPool ? 1 : 0);
             if (Input.GetMouseButton(0))
             {
                 PlantMode = false;
-                var tree = Instantiate(_treePref, transform);
+                Tree tree = null;
+                if (!onPool)
+                {
+                    tree = Instantiate(_treePref, transform);
+                }
+                else
+                {
+                    tree = Instantiate(_bigTreePref, transform);
+                    var coll = hitPool.collider;
+                    coll.enabled = false;
+                    coll.gameObject.GetComponent<SpriteRenderer>()
+                        .DOFade(0, 1)
+                        .SetEase(Ease.Linear);
+                }
                 tree.transform.position = hit.point;
                 SeedCount--;
             }

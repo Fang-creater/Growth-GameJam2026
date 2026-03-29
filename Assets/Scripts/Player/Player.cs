@@ -11,6 +11,7 @@ namespace Regrowth
         private static readonly int HSpeed = Animator.StringToHash("HSpeed");
         private static readonly int VSpeed = Animator.StringToHash("VSpeed");
         private static readonly int Sleeping = Animator.StringToHash("Success");
+        private static readonly int Defeat = Animator.StringToHash("Defeat");
 
         [Header("Movement Settings")]
         [SerializeField] private float maxSpeed = 8f;
@@ -53,6 +54,7 @@ namespace Regrowth
         {
             if (_locked) return;
             Move();
+            if (CheckOnWater()) Defeated();
         }
 
         private void Move()
@@ -83,6 +85,10 @@ namespace Regrowth
         {
             return Physics2D.OverlapCircle(transform.position, 0.5f, LayerMask.GetMask("Ground"));
         }
+        private bool CheckOnWater()
+        {
+            return Physics2D.OverlapCircle(transform.position, 0.5f, LayerMask.GetMask("Water"));
+        }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -98,11 +104,24 @@ namespace Regrowth
                 _onTree = null;
             }
         }
+        private void OnTriggerStay2D(Collider2D other)
+        {
+            if (other.CompareTag("Danger"))
+            {
+                Defeated();
+            }
+        }
 
         public void Sleep()
         {
             _locked = true;
             _animator.SetTrigger(Sleeping);
+            _rb.bodyType = RigidbodyType2D.Static;
+        }
+        private void Defeated()
+        {
+            _locked = true;
+            _animator.SetTrigger(Defeat);
             _rb.bodyType = RigidbodyType2D.Static;
         }
     }
