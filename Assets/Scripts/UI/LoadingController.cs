@@ -7,7 +7,7 @@ namespace Regrowth
 {
     public class LoadingController : MonoBehaviour
     {
-        [SerializeField] private Slider progressSlider; // ½ø¶ÈÌõ£¨¿ÉÑ¡£©
+        [SerializeField] private Slider progressSlider; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½
 
         private void Start()
         {
@@ -20,17 +20,17 @@ namespace Regrowth
 
             if (string.IsNullOrEmpty(target))
             {
-                Debug.LogError("[Loading] TargetSceneName Îª¿Õ£ºÇë´Ó LevelSelect ½øÈë Loading");
+                Debug.LogError("[Loading] TargetSceneName Îªï¿½Õ£ï¿½ï¿½ï¿½ï¿½ LevelSelect ï¿½ï¿½ï¿½ï¿½ Loading");
                 return;
             }
 
-            // ½«½ø¶È»Øµ÷Ó³Éäµ½ UI
+            // ï¿½ï¿½ï¿½ï¿½ï¿½È»Øµï¿½Ó³ï¿½äµ½ UI
             IProgress<float> progress = new Progress<float>(p =>
             {
                 if (progressSlider != null) progressSlider.value = p;
             });
 
-            await SnSceneManager.Instance.LoadSceneAsync(target, progress);
+            await SnSceneManager.LoadSceneAsync(target, progress);
         }
     }
 }
