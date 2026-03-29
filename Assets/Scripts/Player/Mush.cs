@@ -21,7 +21,7 @@ namespace Regrowth
 
         private void FixedUpdate()
         {
-            var hit = Physics2D.Raycast(transform.position, Vector2.up, 10f, LayerMask.GetMask("Tree"));
+            var hit = Physics2D.Raycast(transform.position, Vector2.up, 10f, LayerMask.GetMask("Tree", "Ground"));
             var act = hit.collider != null;
             if (act == _active) return;
             coll.enabled = act;

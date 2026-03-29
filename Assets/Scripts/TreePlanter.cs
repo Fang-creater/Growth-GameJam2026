@@ -23,7 +23,7 @@ namespace Regrowth
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Q) && SeedCount > 0)
-                PlantMode = true;
+                PlantMode = !PlantMode;
             if (!PlantMode)
             {
                 _indicator.gameObject.SetActive(false);
