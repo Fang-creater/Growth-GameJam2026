@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tree
-  tags: []
+  - Danger
   layers:
   - Default
   - TransparentFX
@@ -15,12 +15,7 @@ TagManager:
   - UI
   - Ground
   - Home
-  - 
-  - Water
-  - UI
-  - 
-  - 
-  - 
+  - TreeCrown
   - 
   - 
   - 
@@ -51,10 +46,10 @@ TagManager:
   - name: BackGround
     uniqueID: 374387775
     locked: 0
-  - name: Others
+  - name: Tree
     uniqueID: 1544006759
     locked: 0
-  - name: Indicator
+  - name: Home
     uniqueID: 77213631
     locked: 0
   - name: Player
