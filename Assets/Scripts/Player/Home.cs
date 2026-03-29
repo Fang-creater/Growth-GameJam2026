@@ -16,7 +16,7 @@ namespace Regrowth
         }
         private void Succeed()
         {
-            Player.Instance.Sleep();
+            Player.Instance.Sleep().Forget();
             Debug.Log("Level Complete");
         }
     }
