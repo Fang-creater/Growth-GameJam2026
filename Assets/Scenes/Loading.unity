@@ -190,8 +190,8 @@ Canvas:
   m_GameObject: {fileID: 130883944}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 649250371}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -605,7 +605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.5901, y: -3.0441}
+  m_AnchoredPosition: {x: 3.590088, y: -3.0440674}
   m_SizeDelta: {x: 1827.396, y: 975.7963}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &968837259
@@ -681,7 +681,7 @@ MonoBehaviour:
   fillSmoothSpeed: 0.8
   unscaledTime: 1
   percentImage: {fileID: 698378728}
-  percent25: {fileID: 4889972906961183285, guid: fb590fe8a2cde964bb094f609fe2ee17, type: 3}
+  percent25: {fileID: -9052175302465337121, guid: eca600fe492ad504d96edc434d4df401, type: 3}
   percent50: {fileID: -8618300507521089039, guid: 2450e00b2c6c40b4faa577394e6c1fa7, type: 3}
   percent75: {fileID: 1367049171711254213, guid: ba6df26f3cf88ba409fdd7013631d316, type: 3}
   percent100: {fileID: 4105064212627955461, guid: d71d0330721a54c40b6e145e3f522ce8, type: 3}
@@ -902,10 +902,10 @@ RectTransform:
   - {fileID: 968837258}
   m_Father: {fileID: 130883948}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1884554516
 GameObject:

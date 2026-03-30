@@ -563,6 +563,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 254822510938188285, guid: 2b5a9566820c2aa46a8bea42c478d7e6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -22.630997
+      objectReference: {fileID: 0}
     - target: {fileID: 946823693712887820, guid: 2b5a9566820c2aa46a8bea42c478d7e6, type: 3}
       propertyPath: btnClose
       value: 
@@ -636,8 +640,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5188109771284036818, guid: 2b5a9566820c2aa46a8bea42c478d7e6, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1848863267}
+    - target: {fileID: 5188109771284036818, guid: 2b5a9566820c2aa46a8bea42c478d7e6, type: 3}
       propertyPath: m_RenderMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5590231128528945910, guid: 2b5a9566820c2aa46a8bea42c478d7e6, type: 3}
       propertyPath: m_Pivot.x
