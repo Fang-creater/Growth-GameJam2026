@@ -1,19 +1,18 @@
 using System;
 using Cysharp.Threading.Tasks;
-using SnExtension;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Regrowth
 {
-    public class SnSceneManager : DontDestroyOnLoadSingleton<SnSceneManager>
+    public class SnSceneManager
     {
         #region 同步加载 (会卡顿主线程，仅适用于极小场景)
 
         /// <summary>
         /// 同步加载场景 (通过 Build Index)
         /// </summary>
-        public void LoadScene(int idx)
+        public static void LoadScene(int idx)
         {
             SceneManager.LoadScene(idx);
         }
@@ -21,7 +20,7 @@ namespace Regrowth
         /// <summary>
         /// 同步加载场景 (通过 场景名称)
         /// </summary>
-        public void LoadScene(string sceneName)
+        public static void LoadScene(string sceneName)
         {
             SceneManager.LoadScene(sceneName);
         }
@@ -35,7 +34,7 @@ namespace Regrowth
         /// </summary>
         /// <param name="idx">场景索引</param>
         /// <param name="progress">用于接收加载进度的回调 (0.0 到 1.0)</param>
-        public async UniTask LoadSceneAsync(int idx, IProgress<float> progress = null)
+        public static async UniTask LoadSceneAsync(int idx, IProgress<float> progress = null)
         {
             // 1. 开始异步加载
             AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(idx);
@@ -59,7 +58,7 @@ namespace Regrowth
         /// <summary>
         /// 异步加载场景 (通过 场景名称)，支持 UniTask
         /// </summary>
-        public async UniTask LoadSceneAsync(string sceneName, IProgress<float> progress = null)
+        public static async UniTask LoadSceneAsync(string sceneName, IProgress<float> progress = null)
         {
             AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneName);
 
@@ -72,6 +71,38 @@ namespace Regrowth
             await asyncOperation.ToUniTask(progress: progress);
         
             Debug.Log($"[SceneManager] 场景 {sceneName} 加载完成！");
+        }
+
+        #endregion
+        
+        #region 重置当前场景 (Reload)
+
+        /// <summary>
+        /// 同步重置当前场景（瞬间重新加载，适用于小关卡或死亡快速重开）
+        /// </summary>
+        public static void ReloadCurrentScene()
+        {
+            // 获取当前正在运行的场景的索引
+            int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        
+            // 复用我们之前写的同步加载逻辑
+            LoadScene(currentIndex);
+        
+            Debug.Log($"[SceneManager] 已同步重置当前场景 (Index: {currentIndex})");
+        }
+
+        /// <summary>
+        /// 异步重置当前场景（支持 UniTask 和进度条，适用于包含大量资源的大场景）
+        /// </summary>
+        /// <param name="progress">用于接收加载进度的回调</param>
+        public static async UniTask ReloadCurrentSceneAsync(IProgress<float> progress = null)
+        {
+            int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        
+            // 复用我们之前写的异步加载逻辑
+            await LoadSceneAsync(currentIndex, progress);
+        
+            Debug.Log($"[SceneManager] 已异步重置当前场景 (Index: {currentIndex})");
         }
 
         #endregion

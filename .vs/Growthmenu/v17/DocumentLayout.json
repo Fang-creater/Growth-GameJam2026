@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "D:\\unity\\unity\\project\\Growthmenu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|D:\\unity\\unity\\project\\Growthmenu\\assets\\scripts\\ui\\loadingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|d:\\unity\\unity\\project\\growthmenu\\assets\\scripts\\ui\\loadingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|solutionrelative:assets\\scripts\\ui\\loadingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|d:\\unity\\unity\\project\\growthmenu\\assets\\scripts\\audio\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|d:\\unity\\unity\\project\\growthmenu\\assets\\scripts\\player\\snscenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|solutionrelative:assets\\scripts\\player\\snscenemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|D:\\unity\\unity\\project\\Growthmenu\\assets\\scripts\\audio\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|solutionrelative:assets\\scripts\\audio\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -46,11 +50,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "SnSceneManager.cs",
+              "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\Player\\SnSceneManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\SnSceneManager.cs",
+              "ToolTip": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\Player\\SnSceneManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\SnSceneManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T03:29:06.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "SceneAudio.cs",
               "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\Audio\\SceneAudio.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Audio\\SceneAudio.cs",
@@ -62,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AudioManager.cs",
               "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\Audio\\AudioManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Audio\\AudioManager.cs",
@@ -70,12 +87,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Audio\\AudioManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-30T01:36:33.165Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T01:36:33.165Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "InGamePauseUI.cs",
               "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\InGamePauseUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\InGamePauseUI.cs",
@@ -87,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "LevelSelectCard.cs",
               "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\LevelSelectCard.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\LevelSelectCard.cs",
@@ -99,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "SceneFlow.cs",
               "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\SceneFlow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\SceneFlow.cs",
@@ -117,14 +133,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\LoadingController.cs",
               "ToolTip": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\LoadingController.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\LoadingController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAwEoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAgwFAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-29T12:55:35.933Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "LevelSelectController.cs",
               "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\LevelSelectController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\LevelSelectController.cs",
@@ -136,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "SceneLoadRequest.cs",
               "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\SceneLoadRequest.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\SceneLoadRequest.cs",
@@ -148,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "LoadingUI_Image.cs",
               "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\LoadingUI_Image.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\LoadingUI_Image.cs",

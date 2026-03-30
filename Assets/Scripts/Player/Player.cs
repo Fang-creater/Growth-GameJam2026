@@ -1,4 +1,5 @@
 ﻿using System;
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using SnExtension;
 using UnityEngine;
@@ -106,21 +107,25 @@ namespace Regrowth
         {
             if (other.CompareTag("Danger"))
             {
-                Defeated();
+                Defeated().Forget();
             }
         }
 
-        public void Sleep()
+        public async UniTaskVoid Sleep()
         {
             _locked = true;
             _animator.SetTrigger(Sleeping);
             _rb.bodyType = RigidbodyType2D.Static;
+            await UniTask.WaitForSeconds(1);
+            //NextScene
         }
-        private void Defeated()
+        private async UniTaskVoid Defeated()
         {
             _locked = true;
             _animator.SetTrigger(Defeat);
             _rb.bodyType = RigidbodyType2D.Static;
+            await UniTask.WaitForSeconds(1);
+            SnSceneManager.ReloadCurrentScene();
         }
     }
 }

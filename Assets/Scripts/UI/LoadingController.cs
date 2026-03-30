@@ -8,15 +8,16 @@ namespace Regrowth
     public class LoadingController : MonoBehaviour
     {
         [Header("UI (Image swap)")]
-        [SerializeField] private Image progressImage;      // 用来显示“带文字的进度图片”
-        [SerializeField] private Sprite[] stepSprites;     // 4张图：25/50/75/100（按顺序放）
+        [SerializeField] private Image progressImage;
+        [SerializeField] private Sprite[] stepSprites;     // 4张：25/50/75/100
+        [SerializeField] private Slider progressSlider;
 
         private int lastStep = -1;
 
         private void Start()
         {
-            // 可选：初始化显示第一张（25%之前也可以先显示25%那张或空白图）
             SetStep(0);
+            if (progressSlider != null) progressSlider.value = 0f;
 
             Load().Forget();
         }
@@ -27,31 +28,32 @@ namespace Regrowth
 
             if (string.IsNullOrEmpty(target))
             {
-                Debug.LogError("[Loading] TargetSceneName 为空，请检查从 LevelSelect 进入 Loading");
+                Debug.LogError("[Loading] TargetSceneName 为空，不能从 LevelSelect 进入 Loading");
                 return;
             }
 
             IProgress<float> progress = new Progress<float>(p =>
             {
-                // Unity 常见：p 最大约到 0.9，这里归一化到 0~1
+                // Unity 场景加载 progress 通常到 0.9，归一化到 0~1
                 float normalized = Mathf.Clamp01(p / 0.9f);
 
-                // 计算档位：0/1/2/3 对应 25/50/75/100
-                int step = GetStepIndex(normalized);
+                if (progressSlider != null)
+                    progressSlider.value = normalized;
 
+                int step = GetStepIndex(normalized);
                 if (step != lastStep)
-                {
                     SetStep(step);
-                }
             });
 
-            await SnSceneManager.Instance.LoadSceneAsync(target, progress);
+            // 这里用 static 调用（你 SnSceneManager 目前就是 static）
+            await SnSceneManager.LoadSceneAsync(target, progress);
 
-            // 最终确保显示 100%
+            // 确保最终显示 100%
+            if (progressSlider != null) progressSlider.value = 1f;
             SetStep(3);
         }
 
-        // 返回 0..3，分别代表 25/50/75/100
+        // 0..3 -> 25/50/75/100
         private int GetStepIndex(float normalized)
         {
             if (normalized >= 0.75f) return 3; // 100%
@@ -67,9 +69,13 @@ namespace Regrowth
             if (progressImage == null) return;
             if (stepSprites == null || stepSprites.Length < 4) return;
 
+            step = Mathf.Clamp(step, 0, 3);
+
             progressImage.sprite = stepSprites[step];
-            progressImage.SetNativeSize(); // 可选：如果你希望图片尺寸自动匹配
             progressImage.preserveAspect = true;
+
+            // SetNativeSize 可选：有时会把 UI 撑坏（看你的布局）
+            // progressImage.SetNativeSize();
         }
     }
 }
