@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\UI\SceneLoadRequest.cs" />
     <Compile Include="Assets\Scripts\UI\LevelSelectCard.cs" />
     <Compile Include="Assets\Scripts\Player\TreeIndicator.cs" />
+    <Compile Include="Assets\Scripts\Audio\SceneAudio.cs" />
     <Compile Include="Assets\Scripts\UI\InGamePauseUI.cs" />
     <Compile Include="Assets\Scripts\Player\SnSceneManager.cs" />
     <Compile Include="Assets\Scripts\UI\LoadingController.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Scripts\DontDestroyOnLoadSingleton.cs" />
     <Compile Include="Assets\Scripts\UI\ClickCycleImage.cs" />
     <Compile Include="Assets\Scripts\UI\UIHoverScale.cs" />
+    <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Player\Tree.cs" />
     <Compile Include="Assets\Scripts\UI\CutoffMaskUI.cs" />
     <Compile Include="Assets\Scripts\Player\Home.cs" />

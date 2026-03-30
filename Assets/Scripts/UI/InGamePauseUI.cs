@@ -19,6 +19,7 @@ public class InGamePauseUI : MonoBehaviour
 
     [Header("Buttons")]
     [SerializeField] private Button btnResume;
+    [SerializeField] private Button btnClose; // NEW: close button (same as Resume)
     [SerializeField] private Button btnExitToMenu;
 
     [Header("Volume = Toggle + Slider")]
@@ -54,6 +55,7 @@ public class InGamePauseUI : MonoBehaviour
         // Wire buttons
         if (btnPause) btnPause.onClick.AddListener(Pause);
         if (btnResume) btnResume.onClick.AddListener(Resume);
+        if (btnClose) btnClose.onClick.AddListener(Resume); // NEW
         if (btnExitToMenu) btnExitToMenu.onClick.AddListener(ExitToMenu);
 
         // Slider ranges
@@ -85,6 +87,7 @@ public class InGamePauseUI : MonoBehaviour
     {
         if (btnPause) btnPause.onClick.RemoveListener(Pause);
         if (btnResume) btnResume.onClick.RemoveListener(Resume);
+        if (btnClose) btnClose.onClick.RemoveListener(Resume); // NEW
         if (btnExitToMenu) btnExitToMenu.onClick.RemoveListener(ExitToMenu);
 
         if (toggleMute) toggleMute.onValueChanged.RemoveListener(OnMuteToggleChanged);
@@ -164,6 +167,14 @@ public class InGamePauseUI : MonoBehaviour
 
     private void ApplyVolume()
     {
+        // Prefer AudioManager so BGM + ambience update immediately
+        if (AudioManager.I != null)
+        {
+            AudioManager.I.ApplyPrefs();
+            return;
+        }
+
+        // Fallback if AudioManager doesn't exist (e.g., playing a level scene directly)
         bool mute = toggleMute && toggleMute.isOn;
         float v = sliderVolume ? sliderVolume.value : 1f;
         AudioListener.volume = mute ? 0f : Mathf.Clamp01(v);
@@ -244,6 +255,7 @@ public class InGamePauseUI : MonoBehaviour
     private void SaveVolume(float v) => PlayerPrefs.SetFloat(PrefVol, v);
     private void SaveBrightnessOn(bool v) => PlayerPrefs.SetInt(PrefBrightnessOn, v ? 1 : 0);
     private void SaveBrightness(float v) => PlayerPrefs.SetFloat(PrefBrightness, v);
+
     private void ApplyAll()
     {
         ApplyVolume();

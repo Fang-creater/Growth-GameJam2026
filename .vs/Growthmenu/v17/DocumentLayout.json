@@ -3,11 +3,23 @@
   "WorkspaceRootPath": "D:\\unity\\unity\\project\\Growthmenu\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|d:\\unity\\unity\\project\\growthmenu\\assets\\scripts\\ui\\ingamepauseui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|D:\\unity\\unity\\project\\Growthmenu\\assets\\scripts\\ui\\loadingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|solutionrelative:assets\\scripts\\ui\\loadingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|d:\\unity\\unity\\project\\growthmenu\\assets\\scripts\\audio\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|solutionrelative:assets\\scripts\\audio\\audiomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|D:\\unity\\unity\\project\\Growthmenu\\assets\\scripts\\ui\\ingamepauseui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|solutionrelative:assets\\scripts\\ui\\ingamepauseui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|d:\\unity\\unity\\project\\growthmenu\\assets\\scripts\\ui\\levelselectcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|D:\\unity\\unity\\project\\Growthmenu\\assets\\scripts\\audio\\sceneaudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|solutionrelative:assets\\scripts\\audio\\sceneaudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|D:\\unity\\unity\\project\\Growthmenu\\assets\\scripts\\ui\\levelselectcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|solutionrelative:assets\\scripts\\ui\\levelselectcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -17,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|D:\\unity\\unity\\project\\Growthmenu\\assets\\scripts\\ui\\sceneflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|solutionrelative:assets\\scripts\\ui\\sceneflow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|D:\\unity\\unity\\project\\Growthmenu\\assets\\scripts\\ui\\loadingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|solutionrelative:assets\\scripts\\ui\\loadingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95C113CC-5969-4837-3EAD-940D0D83074E}|regrowth.csproj|D:\\unity\\unity\\project\\Growthmenu\\assets\\scripts\\ui\\sceneloadrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,24 +46,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "SceneAudio.cs",
+              "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\Audio\\SceneAudio.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Audio\\SceneAudio.cs",
+              "ToolTip": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\Audio\\SceneAudio.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Audio\\SceneAudio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T01:37:58.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AudioManager.cs",
+              "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\Audio\\AudioManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Audio\\AudioManager.cs",
+              "ToolTip": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\Audio\\AudioManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Audio\\AudioManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T01:36:33.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "InGamePauseUI.cs",
               "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\InGamePauseUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\InGamePauseUI.cs",
               "ToolTip": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\InGamePauseUI.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\InGamePauseUI.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAYwPsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAQBAAAAAAAAAAAgwAcBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T14:25:58.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-29T14:25:58.335Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "LevelSelectCard.cs",
               "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\LevelSelectCard.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\LevelSelectCard.cs",
@@ -63,12 +95,11 @@
               "RelativeToolTip": "Assets\\Scripts\\UI\\LevelSelectCard.cs",
               "ViewState": "AgIAAK0AAAAAAAAAAAAswA4AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T13:18:46.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-29T13:18:46.271Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "SceneFlow.cs",
               "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\SceneFlow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\SceneFlow.cs",
@@ -80,19 +111,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "LoadingController.cs",
               "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\LoadingController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\LoadingController.cs",
               "ToolTip": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\LoadingController.cs",
               "RelativeToolTip": "Assets\\Scripts\\UI\\LoadingController.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAUwCMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAwEoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-29T12:55:35.933Z"
+              "WhenOpened": "2026-03-29T12:55:35.933Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "LevelSelectController.cs",
               "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\LevelSelectController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\LevelSelectController.cs",
@@ -104,7 +136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "SceneLoadRequest.cs",
               "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\SceneLoadRequest.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\SceneLoadRequest.cs",
@@ -116,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "LoadingUI_Image.cs",
               "DocumentMoniker": "D:\\unity\\unity\\project\\Growthmenu\\Assets\\Scripts\\UI\\LoadingUI_Image.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\LoadingUI_Image.cs",
