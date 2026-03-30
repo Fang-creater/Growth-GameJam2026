@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\TreePlanter.cs" />
     <Compile Include="Assets\Scripts\UI\SceneFlow.cs" />
     <Compile Include="Assets\Scripts\UI\LevelSelectUI.cs" />
+    <Compile Include="Assets\Scripts\UI\LevelProgress.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\UI\SettingsPopupUI.cs" />
     <Compile Include="Assets\Scripts\UI\PauseUIController.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Scripts\UI\LoadingController.cs" />
     <Compile Include="Assets\Scripts\BehaviourSingleton.cs" />
     <Compile Include="Assets\Scripts\DontDestroyOnLoadSingleton.cs" />
+    <Compile Include="Assets\Scripts\UI\ResetButton.cs" />
     <Compile Include="Assets\Scripts\UI\ClickCycleImage.cs" />
     <Compile Include="Assets\Scripts\UI\UIHoverScale.cs" />
     <Compile Include="Assets\Scripts\Audio\AudioManager.cs" />

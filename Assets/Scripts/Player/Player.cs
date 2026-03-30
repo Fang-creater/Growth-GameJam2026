@@ -3,6 +3,8 @@ using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using SnExtension;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.IO;
 
 namespace Regrowth
 {
@@ -116,8 +118,33 @@ namespace Regrowth
             _locked = true;
             _animator.SetTrigger(Sleeping);
             _rb.bodyType = RigidbodyType2D.Static;
+
             await UniTask.WaitForSeconds(1);
-            //NextScene
+
+            int current = SceneManager.GetActiveScene().buildIndex;
+            int next = current + 1;
+
+            // 先尝试解锁下一关（选关界面会读这个值来解锁卡片）
+            LevelProgress.UnlockBuildIndex(next);
+
+            // 如果下一关不存在，回主菜单
+            string nextPath = SceneUtility.GetScenePathByBuildIndex(next);
+            if (string.IsNullOrEmpty(nextPath))
+            {
+                SceneManager.LoadScene("MainMenu");
+                return;
+            }
+
+            // 如果下一关不是 Level*，也回主菜单（用于“最后一关回主菜单”）
+            string nextName = Path.GetFileNameWithoutExtension(nextPath);
+            if (!nextName.StartsWith("Level"))
+            {
+                SceneManager.LoadScene("MainMenu");
+                return;
+            }
+
+            // 正常进入下一关
+            SceneManager.LoadScene(next);
         }
         private async UniTaskVoid Defeated()
         {

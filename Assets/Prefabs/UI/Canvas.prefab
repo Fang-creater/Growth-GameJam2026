@@ -226,7 +226,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2947665682826326408}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6244695126913552920}
+        m_TargetAssemblyTypeName: Regrowth.ResetButton, regrowth
+        m_MethodName: ResetToSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &455639778723136517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1171,7 +1183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1837,6 +1849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4479765043405616062}
   - component: {fileID: 7894912069853568879}
+  - component: {fileID: 6244695126913552920}
   m_Layer: 5
   m_Name: PauseUIRoot
   m_TagString: Untagged
@@ -1877,6 +1890,18 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &6244695126913552920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6248844964325999564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5528a747102e5384bbb212fd699da6c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6276861236639067463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,7 +2680,7 @@ MonoBehaviour:
   btnPause: {fileID: 4935483218465342048}
   pauseUIRoot: {fileID: 6248844964325999564}
   btnResume: {fileID: 6570863879539208430}
-  btnClose: {fileID: 0}
+  btnClose: {fileID: 5181949827538820410}
   btnExitToMenu: {fileID: 2098174367332897315}
   toggleMute: {fileID: 8901849903276954692}
   sliderVolume: {fileID: 2478142820731124470}

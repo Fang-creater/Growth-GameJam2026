@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Regrowth;
 
 public class LevelSelectUI : MonoBehaviour
 {
@@ -16,14 +17,21 @@ public class LevelSelectUI : MonoBehaviour
     {
         instance = this;
 
-        // 这里先给一个示例：只解锁第一关，其它锁住
-        // 以后你做存档后，把 unlocked 从存档读出来即可
+        int maxUnlocked = LevelProgress.GetMaxUnlocked();
+
         if (cards != null && cards.Length > 0)
         {
             for (int i = 0; i < cards.Length; i++)
             {
                 if (!cards[i]) continue;
-                cards[i].SetUnlocked(i == 0); // 仅第0个解锁
+
+                // LevelSelectCard.SceneName 例如 "Level1"
+                string scenePath = $"Assets/Scenes/{cards[i].SceneName}.unity";
+                int buildIndex = SceneUtility.GetBuildIndexByScenePath(scenePath);
+
+                // buildIndex == -1 表示这个场景没加入 Build Settings，会保持锁住
+                bool unlocked = buildIndex >= 0 && buildIndex <= maxUnlocked;
+                cards[i].SetUnlocked(unlocked);
             }
         }
     }
@@ -42,7 +50,12 @@ public class LevelSelectUI : MonoBehaviour
             return;
         }
 
+        // 你当前项目里 LoadingController 用的是 SceneLoadRequest.TargetSceneName
+        // 但 LevelSelectUI 这里写的是 SceneFlow.NextSceneName（两套方案混在一起）
+        // 为了确保能正常从 Loading 进入关卡，这里两个都赋值一次（兼容）
         SceneFlow.NextSceneName = targetScene;
+        SceneLoadRequest.TargetSceneName = targetScene;
+
         SceneManager.LoadScene(instance.loadingSceneName);
     }
 
